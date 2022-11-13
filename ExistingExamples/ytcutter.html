@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Cut and Download Youtube Videos</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<link rel="stylesheet" href="/assets/css/all.ytcutter.css" />
+		<link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400" />
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144249614-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-144249614-1');
+		</script>
+</head>
+	<body class="is-preload">
+
+        
+        <!-- Header -->
+        <section id="header">
+            <div id="linkone">
+                <div id="singup">
+                    <a href="#" id="buy_link">Register</a> |
+                    <a href="#" id="login_link">Login</a>
+                </div>
+                <div id="account" style="display:none">
+                    <span id="welcome"></span>
+                    <a href="#" id="account_link">My Account</a> |
+                    <a href="#" id="logout_link">Logout</a>
+                </div>
+            </div>
+            <div class="languages">
+                <a href="/"><img src="/assets/images/en_lang.gif"></a>
+                <a href="/de/"><img src="/assets/images/de_lang.gif"></a>
+                <a href="/es/"><img src="/assets/images/es_lang.gif"></a>
+                <a href="/fr/"><img src="/assets/images/fr_lang.gif"></a>
+                <a href="/it/"><img src="/assets/images/it_lang.gif"></a>
+                <a href="/pt/"><img src="/assets/images/br_lang.gif"></a>
+                <a href="/ru/"><img src="/assets/images/ru_lang.gif"></a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a section="#one" href="/#one" class="active">Home</a></li>
+                    <li><a section="#two" href="/#two">Features</a></li>
+                    <li><a section="#three" href="/#three">Help</a></li>
+                </ul>
+            </nav>
+            <footer>
+                <ul class="icons">
+                    <li><a href="https://twitter.com/home?status=https%3A//ytcutter.com" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//ytcutter.com" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="/cdn-cgi/l/email-protection#fe97909891be878a9d8b8a8a9b8cd09d9193" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+            </footer>
+        </section>
+
+		<!-- Wrapper -->
+        <div id="wrapper">
+
+            <div id="title">
+                <!-- One -->
+                <section>
+                    <div class="container">
+                        <header class="major">
+                            <h2 id="logo">
+                                <a href="/">YT Cutter
+                                <img src="/assets/images/ytcutter.png">
+                                </a>
+                            </h2>
+                            <p>
+                                Extract favorite scenes from YouTube videos                            </p>
+                        </header>
+                    </div>
+                </section>
+            </div>
+						<div id="main"><!-- Main -->
+
+
+							<section id="one">
+								<div class="container">
+									<form id="form1" autocomplete="off">
+										Paste youtube video URL <span id="example">(try our <a href='#'>test example</a> &darr;)</span>
+										<div>
+											<input id="url" name="url" type="text" style="width:70%; float: left; margin-right: 10px;" placeholder="https://www.youtube.com/watch?v=...">
+											<input id="submit" type="submit" style="width:20%" value="Start">
+										</div>
+									</form>
+
+									<form id="form2" autocomplete="off" onsubmit="return false">
+										<div id="editor" style="display:none">
+											<div id="controls">
+
+												<div id="timeControls">
+													<div>
+														<label for="currentTime">current time:</label>
+													</div>
+													<div>
+														<input type="button" id="backButton" class="button primary" value="&lt;" disabled="disabled">
+														<input id="currentTime" type="text">
+														<input type="button" id="forwardButton" class="button primary" value="&gt;" disabled="disabled">
+													</div>
+													<div>
+														<button id="startButton" type="button" class="button primary" disabled="disabled" title="set start time">start</button>
+														<button id="endButton" type="button" class="button primary" disabled="disabled" title="set end time">end</button>
+													</div>
+												</div>
+
+												<div id="durationControls">
+													<div>
+														<label id="gotoStartTime">start:</label>
+														<input id="startTime" type="text" placeholder="not set">
+													</div>
+													<div>
+														<label id="gotoEndTime">end:</label>
+														<input id="endTime" type="text" placeholder="not set">
+													</div>
+													<div>
+														<label for="duration">duration:</label>
+														<span id="duration"></span>
+													</div>
+												</div>
+
+												<div id="actionControls">
+													<div>
+														<button id="previewButton" type="button" class="button primary" disabled="disabled">preview</button>
+													</div>
+													<div>
+
+													<div id="downloadDropdown" >
+														<button id="downloadButton" type="button" class="button primary" disabled="disabled">
+															<span>download</span>
+															<span class="caret">&#9660;</span>
+														</button>
+														<ul style="display:none">
+															<li><a href="#" value="video">video</a></li>
+															<li><a href="#" value="video_quick">video (quick)</a></li>
+															<li><a href="#" value="gif">gif animation</a></li>
+															<li><a href="#" value="audio">audio file</a></li>
+															<li><a href="#" value="screenshot">screenshot</a></li>
+														</ul>
+													</div>
+
+												</div>
+											</div>
+										</div>
+
+										<div id="player"></div>
+									</div>
+								</form>
+
+								<div id="errors">
+									<h4>Error summary</h4>
+									<ul></ul>
+								</div>
+
+								<div id="result">
+									<div class="modal">
+										<h3 id="perc"></h3>
+										<div id="ads_info"></div>
+									</div>
+								</div>
+
+							</div>
+						</section>
+
+						<!-- Two -->
+						<section id="two">
+							<div class="container">
+								<h3>Features</h3>
+								<p>
+								</p>
+								<ul class="feature-icons">
+									<li class="fa-code">Trim and download Youtube movies online</li>
+									<li class="fa-book">Save cropped parts to your computer</li>
+									<li class="fa-code">Export to video, audio or animated GIF</li>
+									<li class="fa-users">Take screenshots of YouTube videos</li>
+									<li class="fa-cubes">High cropping precision (0.1 sec)</li>
+									<li class="fa-bolt">Works online, no registration needed</li>
+								</ul>
+							</div>
+						</section>
+
+						<!-- Three -->
+						<section id="three">
+							<div class="container">
+								<h3>Frequently Asked Questions</h3>
+								<div class="features">
+									<article>
+										<div class="inner">
+											<a name="clip"></a>
+											<h4>There is a problem with my clip (audio not synchronized, video freezes, turns black etc.)</h4>
+											<p>
+											This is usually caused by outdated codecs in your video player. Please download <a href="https://www.videolan.org/vlc/">VLC player</a> and most problems should be gone.											Another possible solution is to transcode your clip. It can be done using a free app <a href="https://handbrake.fr/">Handbrake</a> (for Windows, MacOS and Linux) or <a href="https://play.google.com/store/apps/details?id=protect.videoeditor">Video Transcoder</a> for Android.											</p>
+										</div>
+									</article>
+									<article>
+										<div class="inner">
+											<h4>Why is video not available?</h4>
+											<p>It can be either inaccessible from our IP because of Youtube country restrictions or Youtube can be simply blocking our IP. In either case we recommend to wait several minutes and try again - it might work then.</p>
+										</div>
+									</article>
+									<article>
+										<div class="inner">
+											<h4>How to take a screenshot of a YOUTUBE movie?</h4>
+											<p>Set the 'start time' to the frame that you want to capture. The end time is ignored, so set it to any value that will enable the download.</p>
+										</div>
+									</article>
+									<article>
+										<div class="inner">
+											<h4>What file types do you generate?</h4>
+											<p>
+											We try to generate MP4 files for videos and M4A for audio. If for a given input it's not possible you may get some <a href='https://en.wikipedia.org/wiki/Matroska'>Matroska</a> (MKV) or <a href='https://en.wikipedia.org/wiki/Vorbis'>Vorbis</a> (OGG) files. Have a look <a href='https://en.wikipedia.org/w/index.php?search=Comparison+of+player+software'>here</a> to find players for these file types. If you want a different file type (e.g. MP3, MP4, MOV) use a program like <a href="https://handbrake.fr/">Handbrake</a> to transcode your clip to the desired format.											</p>
+										</div>
+									</article>
+								</div>
+							</div>
+						</section>
+					</div> <!-- Main -->
+
+<!--
+					<div id="contact">
+						<h3>Contact us</h3>
+						<a name="contact"></a>
+						<form method="post" action="/contact-nojs.php" onsubmit="return contactSubmit(this)">
+							<div>
+								<label for="email">Your email</label>
+								<input name="email" id="email" type="email" required="required">
+							</div>
+							<div>
+								<label for="msg">Your message</label>
+								<textarea name="msg" id="msg" rows="5" required="required"></textarea>
+							</div>
+							<input type="submit">
+						</form>
+						<div id="sent"></div>
+					</div>
+-->
+
+
+				<!-- Footer -->
+                <section id="footer">
+                    <div class="container">
+                        <ul class="copyright">
+                            Credits:                            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                            <li>&copy; <a href='http://www.stockunlimited.com'>Image by StockUnlimited</a></li>
+                            <li><a href="https://ytdl-org.github.io/youtube-dl/">youtube-dl</a></li>
+                            <li><a href="https://ffmpeg.org/">FFmpeg</a></li>
+                            <li><a title="Terms of Service Template Generator" href="https://getterms.io/">GetTerms.io</a></li>
+                            <li><a href="/en/tos.html">Terms of service</a></li>
+                            <li><a href="/en/privacy.html">Privacy policy</a></li>
+                        </ul>
+                    </div>
+                </section>
+			</div>
+
+
+
+		<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://www.youtube.com/iframe_api"></script>
+		<script src="/assets/js/all.ytcutter.js"></script>
+		<script src="/assets/js/messages.en.js"></script>
+	</body>
+</html>
